@@ -15,6 +15,8 @@ export const routes = [
     {
         path : '/users',
         element : <UsersPage/>,
+        //we dont need to fetch toDos but we may need to fetch from multiple sources
+        //so just to test and implement the logic on the backend we are also fetching toDos
         loader : ({dispatch} : any) => [dispatch(fetchUsers()),dispatch(fetchTodos())],
     },
     {
